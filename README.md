@@ -19,6 +19,8 @@
 
 教程相关资源：[CSDN](https://blog.csdn.net/csnz123123/article/details/116236515),[CSDN](https://blog.csdn.net/niannujiao6/article/details/108569138)，[gitee](https://gitee.com/git_baboben/smbms/tree/master)
 
+> 附上本项目的GitHub地址： https://github.com/grant1499/smbms_java_web/tree/master
+
 超市管理系统(smbms)作为每个计算机专业的大学生都是一个很好的练手项目，逻辑层次分明，基础功能包括用户的登录和注销，用户和供应商以及订单信息的增删查改的基础功能。可以帮助我们更好的加深理解三层架构的理念，本项目作为纯Java Web版，不涉及Spring和SpringBoot的知识，就是帮助我们从底层和从源代码开始理解，为以后的微服务和作铺垫。
 
 ## 2.项目框图
