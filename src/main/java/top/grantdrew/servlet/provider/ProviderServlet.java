@@ -72,6 +72,7 @@ public class ProviderServlet extends HttpServlet {
     private void modify(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String proContact = request.getParameter("proContact");
+        String proName = request.getParameter("proName");
         String proPhone = request.getParameter("proPhone");
         String proAddress = request.getParameter("proAddress");
         String proFax = request.getParameter("proFax");
@@ -82,6 +83,7 @@ public class ProviderServlet extends HttpServlet {
         provider.setProContact(proContact);
         provider.setProPhone(proPhone);
         provider.setProFax(proFax);
+        provider.setProName(proName);
         provider.setProAddress(proAddress);
         provider.setProDesc(proDesc);
         provider.setModifyBy(((User)request.getSession().getAttribute(Constant.USER_SESSION)).getId());
@@ -90,6 +92,7 @@ public class ProviderServlet extends HttpServlet {
         ProviderService providerService = new ProviderServiceImpl();
         flag = providerService.modify(provider);
         if(flag){
+            System.out.println("flag is : "  + flag);
             response.sendRedirect(request.getContextPath()+"/jsp/provider.do?method=query");
         }else{
             request.getRequestDispatcher("providermodify.jsp").forward(request, response);

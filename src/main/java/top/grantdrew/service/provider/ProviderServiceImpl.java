@@ -135,6 +135,7 @@ public class ProviderServiceImpl implements ProviderService {
             connection = BaseDao.getConnection();
             if(providerDao.modify(connection,provider) > 0)
                 flag = true;
+            System.out.println(" service flag is : "+ flag);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
